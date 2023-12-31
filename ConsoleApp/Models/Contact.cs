@@ -2,9 +2,8 @@
 
 namespace ConsoleApp.Models
 {
-    public class Contact : IContact
+    public class Contact : IContacts
     {
-        public int Id { get; set; }
         public string? PhoneNumber { get; set; }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;

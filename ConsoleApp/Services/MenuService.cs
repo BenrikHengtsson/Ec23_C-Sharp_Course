@@ -1,4 +1,7 @@
-﻿namespace ConsoleApp.Services;
+﻿using ConsoleApp.Interfaces;
+using ConsoleApp.Models;
+
+namespace ConsoleApp.Services;
 
 public interface IMenuService 
 {
@@ -44,9 +47,25 @@ public class MenuService : IMenuService
     }
 
 
-    public void RenderAddContactOption()
+    private void RenderAddContactOption()
     {
-        throw new NotImplementedException();
+        IContacts contact = new Contact();
+
+        RenderHeaderTitle("Add New Contact");
+        Console.Write("First Name: ");
+        contact.FirstName = Console.ReadLine() ?? "";
+        Console.Write("Last Name: ");
+        contact.LastName = Console.ReadLine() ?? "";
+        Console.Write("Email: ");
+        contact.Email = Console.ReadLine() ?? "";
+        Console.Write("Phone Number: ");
+        contact.PhoneNumber = Console.ReadLine() ?? "";
+        Console.Write("Adress: ");
+        contact.Address = Console.ReadLine() ?? "";
+        Console.Write("City: ");
+        contact.City = Console.ReadLine() ?? "";
+        Console.Write("Postal Code: ");
+        contact.PostalCode = Console.ReadLine() ?? "";
     }
 
     private void RenderRemoveContactOption()
