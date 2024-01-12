@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-
+//snabbversion gjord guidad utav ChatGPT och Kollegor som kan c#.
 class Program
 {
     static List<Contact> contacts = new List<Contact>();
@@ -148,7 +148,10 @@ class Program
         Console.WriteLine("Tryck på en tangent för att fortsätta...");
         Console.ReadKey();
     }
-
+    /// <summary>
+    /// Laddar in kontakter från json fil från "@desktop"/skrivbord.
+    /// </summary>
+    /// <returns></returns>
     private static List<Contact> LoadContacts()
     {
         try

@@ -9,6 +9,8 @@ namespace ConsoleApp
             IMenuService menuService = new MenuService();
 
             menuService.RenderMainMenu();
+            //menuService.RenderAllContacts();    
+           
             
             
 

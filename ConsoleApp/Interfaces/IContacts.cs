@@ -9,5 +9,8 @@
         string LastName { get; set; }
         string? PhoneNumber { get; set; }
         string PostalCode { get; set; }
+        //Guid Id { get; set; }
+        int Id {  get; set; }
+       
     }
 }
